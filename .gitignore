@@ -1,0 +1,111 @@
+# Python
+__pycache__/
+*.py[cod]
+*.so
+.Python
+env/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Django
+*.log
+local_settings.py
+db.sqlite3
+db.sqlite3-journal
+media/
+static/
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# Data and model files
+data/
+
+predictions/
+trained_models/
+
+# IDE
+.idea/
+*.swp
+*.swo
+# Node
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# System
+.DS_Store
+Thumbs.db
+
+
+# old ignores
+# Ignore node_modules for frontend
+frontend/node_modules/
+frontend_old/node_modules/
+frontend_old/
+
+# Ignore Python virtual environment for backend
+backend/venv/
+/venv/
+
+# Ignore data
+backend/data/
+backend/uploads/
+backend/training_data/
+backend/predictions/
+backend/trained_models/
+backend/rasters/
+*.tif
+code_old/
+
+backend/__pycache__/
+
+*.md
+
+frontend/.env
+
+# General ignores
+.DS_Store
+*.log
+backend/.env
+frontend/src/pages/AnalysisPage_old.vue
+backend/deforestation/*
+backend/gfw_alerts/*
+qgis/*
+.env
+backend/djangocfw/core/__pycache__/* 
+backend/djangocfw/core/migrations/__pycache__/*
+backend/djangocfw/__pycache__/*
+backend/djangocfw/core/services/__pycache__/*
+backend/djangocfw/djangocfw/__pycache__/*
+backend/djangocfw/djangocfw/__pycache__/settings.cpython-312.pyc
+backend/djangocfw/djangocfw/__pycache__/urls.cpython-312.pyc
+
+# Data directories
+backend/djangocfw/data/
+backend/djangocfw/media/
+
+# Deployment scripts with sensitive info
+deploy_docker.sh
+*.pem
+*.key
+backup-*.sql
+version.txt
+.env.prod
+backend/download_planet_mosaics.py
+beta testing/Beta invites 2025_02_03.gsheet

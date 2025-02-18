@@ -1,0 +1,98 @@
+services:
+  db:
+    image: postgis/postgis:15-3.3
+    env_file:
+      - ./.env
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U cfwuser -d cfwdb"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 10s
+    networks:
+      - app-network
+    environment:
+      - TZ=America/New_York
+
+  redis:
+    image: redis:latest
+    ports:
+      - "6379:6379"
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 5s
+      timeout: 3s
+      retries: 5
+    networks:
+      - app-network
+    environment:
+      - TZ=America/New_York
+
+
+  backend:
+    build: 
+      context: ./backend/djangocfw
+      dockerfile: Dockerfile
+    volumes:
+      # - ./backend/djangocfw/core:/app/core
+      # - ./backend/djangocfw/djangocfw:/app/djangocfw
+      # - ./backend/djangocfw/manage.py:/app/manage.py
+      # - ./backend/djangocfw/wait_for_db.py:/app/wait_for_db.py
+      # - ./backend/djangocfw/entrypoint.sh:/app/entrypoint.sh
+      # - ./data/planet_quads:/app/data/planet_quads
+      # - ./data/predictions:/app/data/predictions
+      # - ./data/models:/app/data/models
+      # - ./media:/app/media
+      # - ./logs:/app/logs
+      - ./backend/djangocfw:/app
+      - planet_data:/app/djangocfw/data/planet_quads
+      
+    ports:
+      - "8000:8000"
+      - "5678:5678"
+      - "3000:3000"
+    env_file:
+      - ./.env
+    command: python -m debugpy --listen 0.0.0.0:5678 --wait-for-client manage.py runserver 0.0.0.0:8000
+    depends_on:
+      db:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+    restart: on-failure:3
+    networks:
+      - app-network
+    environment:
+      - TZ=America/New_York
+
+  frontend:
+    build: 
+      context: ./frontend
+      args:
+        DJANGO_DEBUG: "True"  # Default to production
+      target: "development"       # Use 'development' or 'production'
+    volumes:  
+      - ./frontend:/app
+      - /app/node_modules
+    ports:
+      - "9000:9000"
+    env_file:
+      - ./.env
+    depends_on:
+      - backend
+    networks:
+      - app-network
+    environment:
+      - TZ=America/New_York
+
+networks:
+  app-network:
+    driver: bridge
+
+volumes:
+  postgres_data:
+  planet_data:

@@ -1,0 +1,779 @@
+{
+  "about": {
+    "alerts": {
+      "description": "Alertas integradas de Global Forest Watch disponibles bajo",
+      "license": "Licencia CC BY 4.0",
+      "title": "Alertas de Deforestación"
+    },
+    "contact": "Para preguntas, inquietudes o comentarios, por favor contacte a:",
+    "creditsTitle": "Créditos y Uso de Datos",
+    "description": "Choco Forest Watch es un proyecto de código abierto. El código está disponible en",
+    "disclaimer": {
+      "text": "Esta plataforma se proporciona \"tal cual\" para fines de investigación y conservación. \nSi bien nos esforzamos por lograr la precisión, no ofrecemos garantías sobre la integridad, confiabilidad y exactitud de esta información. \nCualquier acción que realice sobre la información de este sitio web es bajo su propio riesgo.",
+      "title": "Aviso Legal"
+    },
+    "funding": {
+      "description": "Este proyecto fue posible gracias al financiamiento de:",
+      "sources": {
+        "caids": "Instituto Connolly Alexander de Ciencia de Datos (CAIDS)",
+        "gfw": "Programa de Pequeñas Subvenciones de Global Forest Watch y el World Resources Institute",
+        "tulane": "Centro de Excelencia para la Inteligencia Artificial Comprometida con la Comunidad de Tulane (CEAI)",
+        "yale": "Iniciativa de Ciencia de Datos Ambientales de Yale (YEDSI)"
+      },
+      "title": "Financiamiento"
+    },
+    "github": "GitHub",
+    "satellite": {
+      "description": "Imágenes con derechos de autor 2024 de Planet Labs, Inc. Todo uso está sujeto al",
+      "license": "Acuerdo de Licencia de Participante del Programa de Datos Satelitales NICFI",
+      "title": "Imágenes Satelitales"
+    },
+    "title": "Acerca de Choco Forest Watch",
+    "version": "Versión"
+  },
+  "analysis": {
+    "runAnalysis": "Ejecutar Análisis",
+    "selectArea": "Seleccionar Área",
+    "title": "Análisis",
+    "unified": {
+      "deforestation": {
+        "existing": {
+          "confirm": {
+            "message": "¿Está seguro que desea eliminar este análisis?",
+            "title": "Eliminar Análisis"
+          },
+          "empty": "No hay análisis de deforestación disponibles. Cree un nuevo análisis abajo.",
+          "title": "Análisis Existentes",
+          "tooltips": {
+            "delete": "Eliminar Análisis"
+          }
+        },
+        "new": {
+          "addDates": "Iniciar un nuevo análisis de deforestación",
+          "analyze": "Iniciar análisis de deforestación",
+          "description": "Seleccione dos fechas para iniciar un nuevo análisis de deforestación.",
+          "endDate": "Fecha Final",
+          "startDate": "Fecha de Inicio",
+          "title": "Nuevo análisis de deforestación",
+          "toggleDates": "Alternar Selección de Fechas"
+        },
+        "previous": {
+          "empty": "No hay análisis de deforestación anteriores disponibles. Cree un nuevo análisis arriba.",
+          "title": "Cargar análisis de deforestación anteriores",
+          "tooltips": {
+            "delete": "Eliminar este análisis",
+            "help": "Esta sección enumera todos los análisis de deforestación anteriores. Haga clic en un análisis para ver detalles o eliminarlo."
+          }
+        },
+        "reload": "Recargar analysis",
+        "title": "Análisis de Deforestación",
+        "tooltips": {
+          "addDates": "Haga clic para iniciar un nuevo análisis de deforestación seleccionando dos fechas.",
+          "help": "Seleccione un análisis de deforestación anterior del menú desplegable o elija dos fechas para generar un nuevo análisis de deforestación."
+        }
+      },
+      "dialogs": {
+        "delete": {
+          "cancel": "Cancelar",
+          "confirm": "Eliminar",
+          "message": "¿Está seguro que desea eliminar este análisis?",
+          "title": "Eliminar Análisis"
+        },
+        "stats": {
+          "close": "Cerrar",
+          "export": "Exportar Estadísticas",
+          "sections": {
+            "overview": "Resumen",
+            "sources": "Fuentes de Alertas",
+            "verification": "Estado de Verificación"
+          },
+          "title": "Estadísticas de Análisis"
+        }
+      },
+      "hotspots": {
+        "confidence": {
+          "high": "Alta",
+          "low": "Baja",
+          "medium": "Media"
+        },
+        "count": "punto crítico | puntos críticos",
+        "empty": "Aún no se han detectado puntos de acceso. \nInicie un nuevo análisis o cargue un análisis anterior para ver los resultados.",
+        "export": {
+          "all": "Todos los Puntos Críticos",
+          "title": "Exportar puntos de acceso a un archivo",
+          "verifiedOnly": "Solo Verificados"
+        },
+        "filters": {
+          "minArea": "Filtrar por área mínima (ha)",
+          "source": "Filtrar por fuente",
+          "sources": {
+            "all": "Todas las Fuentes",
+            "gfw": "Global Forest Watch",
+            "local": "Alertas Locales"
+          }
+        },
+        "status": {
+          "rejected": "Rechazado",
+          "unsure": "Incierto",
+          "unverified": "Sin Verificar",
+          "verified": "Verificado"
+        },
+        "title": "Puntos críticos de deforestación",
+        "tooltips": {
+          "help": "Haga clic en un punto de acceso para ampliarlo. Utilice los botones o los atajos de teclado (1, 2, 3) para cambiar el estado de verificación según su evaluación visual.",
+          "reject": "Rechazar Alerta (3)",
+          "unsure": "Marcar como Incierto (2)",
+          "verify": "Verificar Deforestación (1)"
+        }
+      },
+      "loading": "Cargando mapa...",
+      "maps": {
+        "legend": {
+          "gfw": "Alerta GFW",
+          "local": "Alerta Local",
+          "status": {
+            "rejected": "Rechazado",
+            "title": "Estado de Verificación",
+            "unsure": "Incierto",
+            "verified": "Verificado"
+          },
+          "title": "Tipos de Alertas"
+        }
+      },
+      "notifications": {
+        "analysisDeleted": "Análisis eliminado exitosamente",
+        "analysisError": "Error al ejecutar el análisis",
+        "analysisSaved": "Análisis guardado exitosamente",
+        "deleteError": "Error al eliminar el análisis",
+        "exportError": "Error al exportar datos",
+        "exportSuccess": "Exportación completada exitosamente",
+        "projectRequired": "Por favor seleccione un proyecto primero",
+        "selectProject": "Seleccionar Proyecto",
+        "verificationError": "Error al actualizar el estado de verificación",
+        "verificationUpdated": "Estado de verificación actualizado"
+      },
+      "stats": {
+        "aoiInfo": "Los porcentajes de área se calculan en relación con el área total del AOI de {area} ha",
+        "breakdown": {
+          "hotspotCount": "{count} puntos críticos",
+          "percentOfSource": "{percent}% de {source}",
+          "status": {
+            "rejected": "Rechazado",
+            "unsure": "Incierto",
+            "unverified": "Sin Verificar",
+            "verified": "Verificado"
+          },
+          "title": "Desglose por Estado (Puntos críticos ≥ {minArea} ha)"
+        },
+        "close": "Cerrar",
+        "export": "Exportar",
+        "landCover": {
+          "title": "Porcentajes de Cobertura Terrestre",
+          "types": {
+            "cloud": "Nube",
+            "forest": "Bosque",
+            "non-forest": "No Bosque",
+            "shadow": "Sombra",
+            "water": "Agua"
+          }
+        },
+        "overview": {
+          "annualRate": "Tasa Anual",
+          "gfwAlerts": "Alertas GFW",
+          "haPerYear": "ha/año",
+          "hotspots": "Puntos Críticos",
+          "localAlerts": "Alertas Locales",
+          "percentOfAoi": "{percent}% del AOI",
+          "showing": "Mostrando puntos críticos ≥ {minArea} ha",
+          "title": "Resumen por Fuente (Puntos críticos ≥ {minArea} ha)",
+          "totalArea": "Área Total"
+        },
+        "subtitle": "{start} a {end}",
+        "title": "Estadísticas de Deforestación"
+      }
+    }
+  },
+  "auth": {
+    "login": {
+      "alreadyHaveAccount": "¿Ya tienes una cuenta?",
+      "createAccount": "Crear Cuenta",
+      "forgotPassword": "¿Olvidó su contraseña?",
+      "landing": {
+        "cta": {
+          "createAccount": "Crear Cuenta",
+          "login": "Iniciar Sesión"
+        },
+        "features": {
+          "ml": {
+            "description": "Desarrolle modelos localizados adaptados a su región y paisaje específico",
+            "title": "Modelos de Aprendizaje Automático Personalizados"
+          },
+          "monitoring": {
+            "description": "Genere alertas de deforestación de alta resolución y monitoree cambios en el uso del suelo a lo largo del tiempo",
+            "title": "Monitoreo Avanzado"
+          },
+          "satellite": {
+            "description": "Visualice imágenes mensuales de 4.7m de resolución de PlanetLabs a través del Programa NICFI",
+            "title": "Imágenes Satelitales de Alta Resolución"
+          },
+          "title": "Características Principales"
+        },
+        "funding": {
+          "title": "Apoyado Por"
+        },
+        "motivation": "Si bien las iniciativas globales de monitoreo de deforestación son invaluables, a menudo enfrentan desafíos a escalas locales donde ocurre la mayoría del trabajo de conservación en terreno. Choco Forest Watch cierra esta brecha al permitir modelos de aprendizaje automático personalizados entrenados con experiencia local.",
+        "subtitle": "Plataforma gratuita y de código abierto que apoya los esfuerzos de conservación local",
+        "tagline": "Monitoreo de Deforestación para la Conservación Local"
+      },
+      "languageRequired": "El idioma preferido es requerido",
+      "loginButton": "Iniciar Sesión",
+      "loginFailed": "Error al iniciar sesión",
+      "loginSuccess": "Sesión iniciada exitosamente",
+      "noAccount": "¿No tiene una cuenta?",
+      "password": "Contraseña",
+      "passwordRequired": "La contraseña es requerida",
+      "rememberMe": "Recordarme",
+      "subtitle": "Monitoree y analice los cambios en la cobertura forestal utilizando imágenes satelitales e inteligencia artificial",
+      "title": "Choco Forest Watch",
+      "username": "Usuario",
+      "usernameRequired": "El usuario es requerido"
+    },
+    "register": {
+      "createButton": "Crear Cuenta",
+      "email": "Correo electrónico",
+      "emailRequired": "El correo electrónico es requerido",
+      "failed": "Error al crear la cuenta",
+      "invalidEmail": "Correo electrónico inválido",
+      "preferredLanguage": "Idioma preferido",
+      "subtitle": "Únase a Choco Forest Watch",
+      "success": "¡Cuenta creada exitosamente!",
+      "title": "Crear Cuenta"
+    },
+    "resetPassword": {
+      "cancel": "Cancelar",
+      "confirm": "",
+      "confirmPassword": "Confirmar Contraseña",
+      "confirmRequired": "La confirmación de contraseña es requerida",
+      "email": "",
+      "emailRequired": "",
+      "enterNew": "Ingrese su nueva contraseña",
+      "error": "",
+      "failed": "Error al enviar el correo electrónico",
+      "instructions": "Ingrese su correo electrónico y le enviaremos instrucciones para restablecer su contraseña.",
+      "invalidEmail": "",
+      "mismatch": "Las contraseñas no coinciden",
+      "password": "Nueva Contraseña",
+      "passwordRequired": "La contraseña es requerida",
+      "resetFailed": "Error al restablecer la contraseña",
+      "resetSuccess": "¡Contraseña restablecida exitosamente! Por favor inicie sesión con su nueva contraseña.",
+      "sendLink": "Enviar Link",
+      "submit": "Restablecer Contraseña",
+      "success": "Instrucciones enviadas a su correo electrónico",
+      "title": "Restablecer Contraseña"
+    }
+  },
+  "common": {
+    "about": "Acerca de",
+    "cancel": "Cancelar",
+    "close": "Cerrar",
+    "confirmLogout": "¿Está seguro que desea cerrar sesión?",
+    "error": "Se produjo un error",
+    "export": "Exportar",
+    "getStarted": "Comenzar",
+    "loading": "Cargando...",
+    "logout": "Cerrar Sesión",
+    "logoutSuccess": "Sesión cerrada exitosamente",
+    "save": "Guardar",
+    "showHelp": "Mostrar Ayuda"
+  },
+  "drawing": {
+    "classes": {
+      "title": "Seleccionar Clase"
+    },
+    "dialogs": {
+      "clear": {
+        "message": "¿Está seguro de que desea borrar todos los polígonos dibujados? \n¡De esto no hay vuelta atrás!",
+        "title": "Eliminar todos los polígonos dibujados"
+      },
+      "delete": {
+        "message": "¿Está seguro que desea eliminar esta característica?",
+        "title": "Eliminar Característica"
+      }
+    },
+    "management": {
+      "clear": "Limpia todos los polígonos dibujados: ¡precaución!",
+      "delete": "Eliminar polígonos seleccionados (Del)",
+      "download": "Descargar polígonos como archivo .geojson",
+      "excludeDate": "Excluir Fecha",
+      "includeDate": "Incluir Fecha",
+      "load": "Cargar polígonos dibujados como archivo .geojson",
+      "save": "Guardar polígonos dibujados (Ctrl S)",
+      "title": "Gestión de Polígonos",
+      "undo": "Deshacer el último polígono dibujado (Ctrl Z)"
+    },
+    "modes": {
+      "draw": "Dibujar (D)",
+      "pan": "Desplazar (M)",
+      "zoomIn": "Acercar (Z)",
+      "zoomOut": "Alejar (X)"
+    },
+    "notifications": {
+      "dateExcluded": "Fecha excluida de entrenamiento",
+      "dateIncluded": "Fecha incluida en entrenamiento",
+      "dateToggleError": "Error al cambiar el estado de exclusión de la fecha",
+      "loadError": "Error al cargar polígonos desde el archivo",
+      "noFeatureSelected": "Ninguna característica seleccionada",
+      "polygonsLoaded": "Polígonos cargados exitosamente",
+      "saveError": "Error al guardar los polígonos de entrenamiento"
+    },
+    "options": {
+      "freehandMode": "Modo Mano Alzada (F). \nHaga clic para cambiar al modo Cuadrado.",
+      "polygonSize": "Tamaño del Polígono (m)",
+      "squareMode": "Modo cuadrado (F). \nHaga clic para cambiar al modo Mano alzada.",
+      "squareSize": "",
+      "title": "Opciones de Dibujo"
+    },
+    "title": "Controles de Dibujo",
+    "tooltips": {
+      "classes": "",
+      "controls": "",
+      "management": "",
+      "selectClass": ""
+    }
+  },
+  "feedback": {
+    "button": "Dar Feedback",
+    "buttonNav": "Feedback",
+    "intro": "¡Ayúdanos a mejorar Choco Forest Watch! Comparte tu experiencia, reporta errores o sugiere nuevas funciones.",
+    "message": "Tu mensaje",
+    "messagePlaceholder": "Por favor, proporciona tanto detalle como sea posible. Para errores, incluye qué estabas haciendo cuando ocurrió el problema.",
+    "messageRequired": "Por favor ingresa tu feedback",
+    "submit": "Enviar",
+    "submitError": "Error al enviar el feedback. Por favor intenta de nuevo.",
+    "submitSuccess": "¡Gracias por tu feedback!",
+    "title": "Enviar Feedback",
+    "types": {
+      "bug": "Reporte de Error",
+      "feature": "Solicitud de Función",
+      "improvement": "Mejora",
+      "other": "Otro"
+    }
+  },
+  "header": {
+    "title": "Choco Forest Watch",
+    "titleShort": "CFW"
+  },
+  "layers": {
+    "baseMap": "Mapa Base",
+    "basemapDate": {
+      "months": {
+        "apr": "Abril",
+        "aug": "Agosto",
+        "dec": "Diciembre",
+        "feb": "Febrero",
+        "jan": "Enero",
+        "jul": "Julio",
+        "jun": "Junio",
+        "mar": "Marzo",
+        "may": "Mayo",
+        "nov": "Noviembre",
+        "oct": "Octubre",
+        "sep": "Septiembre",
+        "short": {
+          "apr": "Abr",
+          "aug": "Ago",
+          "dec": "Dic",
+          "feb": "Feb",
+          "jan": "Ene",
+          "jul": "Jul",
+          "jun": "Jun",
+          "mar": "Mar",
+          "may": "May",
+          "nov": "Nov",
+          "oct": "Oct",
+          "sep": "Sep"
+        }
+      },
+      "title": "Fecha de las imágenes",
+      "tooltip": "Seleccione la fecha de las imágenes satelitales. Las fechas subrayadas en verde tienen datos de entrenamiento. Use las teclas de flecha izquierda/derecha para navegar rápidamente entre fechas."
+    },
+    "satellite": "Satélite",
+    "switcher": {
+      "opacity": "Opacidad",
+      "title": "Capas del Mapa",
+      "tooltips": {
+        "collapse": "Lista de capa de colapso",
+        "expand": "Expandir la lista de capas",
+        "remove": "Eliminar capa",
+        "toggleOpacity": "Alternar control de opacidad"
+      }
+    },
+    "terrain": "Terreno"
+  },
+  "navigation": {
+    "admin": {
+      "name": "Admin",
+      "tooltip": "Admin"
+    },
+    "analysis": {
+      "name": "Análisis",
+      "tooltip": "Analizar y verificar"
+    },
+    "projects": {
+      "name": "Proyectos",
+      "tooltip": "Seleccionar o crear proyecto"
+    },
+    "training": {
+      "name": "Entrenar Modelo",
+      "tooltip": "Entrenar Modelo"
+    }
+  },
+  "notifications": {
+    "aoiSaved": "AOI guardado exitosamente. Ahora puede comenzar a entrenar su modelo.",
+    "error": {
+      "training": "Error al transicionar al modo de entrenamiento"
+    },
+    "languageUpdateFailed": "Error al actualizar la preferencia de idioma",
+    "languageUpdated": "Preferencia de idioma actualizada exitosamente",
+    "projectLoaded": "Proyecto cargado exitosamente"
+  },
+  "projects": {
+    "aoi": {
+      "actions": "Acciones",
+      "buttons": {
+        "clear": "Limpiar AOI",
+        "draw": "Dibujar AOI",
+        "save": "Guardar AOI",
+        "upload": "Cargar archivo AOI"
+      },
+      "currentSize": "Tamaño Actual del AOI",
+      "description": "Por favor dibuje el Área de Interés (AOI) para su proyecto en el mapa o cargue un archivo GeoJSON o Shapefile comprimido.",
+      "explanation": "El Área de Interés (AOI) define la región donde se generarán las alertas de deforestación y se calcularán las estadísticas. Esto puede ser los límites de un área protegida o una región más grande que incluya una zona de amortiguamiento alrededor del área que desea monitorear. Tenga en cuenta que una vez que se guarda un AOI, no se puede modificar posteriormente.",
+      "hectares": "ha",
+      "limits": "Nota: Durante la fase de prueba, el tamaño máximo del AOI está limitado a 10,000 hectáreas y debe estar dentro de Ecuador. Recibirá un mensaje de error si se exceden estos límites.",
+      "notifications": {
+        "noAoi": "No se ha dibujado ningún AOI",
+        "noFeatures": "No se encontraron características válidas en el archivo",
+        "outsideEcuador": "El AOI debe estar dentro de los límites de Ecuador",
+        "saveFailed": "Error al guardar AOI",
+        "saved": "AOI guardado exitosamente",
+        "tooLarge": "El AOI es demasiado grande. El área máxima permitida es {max} ha",
+        "unsupportedFile": "Tipo de archivo no soportado. Por favor cargue un archivo GeoJSON o Shapefile comprimido.",
+        "uploadFailed": "Error al procesar {fileType}",
+        "uploadSuccess": "Archivo cargado exitosamente"
+      },
+      "sizeWarning": "Advertencia: El tamaño del AOI excede el máximo permitido ({max} ha)",
+      "title": "Definir Área de Interés",
+      "tooltips": {
+        "clear": "Eliminar el AOI actual del mapa",
+        "draw": "Dibujar un AOI rectangular en el mapa",
+        "save": "Guardar el AOI actual en su proyecto",
+        "upload": "Cargar archivo .geojson o shapefile comprimido",
+        "upload_aoi": "Cargar un archivo GeoJSON o Shapefile comprimido que contenga los límites de su AOI"
+      }
+    },
+    "buttons": {
+      "cancel": "Cancelar",
+      "rename": "Renombrar"
+    },
+    "createButton": "Crear Proyecto",
+    "createNew": "Crear Nuevo Proyecto",
+    "created": "Proyecto creado exitosamente. Por favor defina su Área de Interés.",
+    "delete": {
+      "confirm": "¿Está seguro que desea eliminar el proyecto \"{name}\"?",
+      "failed": "Error al eliminar el proyecto",
+      "success": "Proyecto eliminado exitosamente",
+      "title": "Confirmar Eliminación"
+    },
+    "description": "Descripción",
+    "existingProjects": "Proyectos Existentes",
+    "failedCreate": "Error al crear el proyecto",
+    "minClasses": "Se requieren al menos 2 clases",
+    "nameRequired": "El nombre del proyecto es requerido. Por favor ingrese un nombre para su proyecto.",
+    "notifications": {
+      "fetchFailed": "Error al cargar los proyectos"
+    },
+    "ok": "Aceptar",
+    "projectName": "Nombre del Proyecto",
+    "rename": {
+      "empty": "El nombre del proyecto no puede estar vacío",
+      "failed": "Error al renombrar el proyecto",
+      "newName": "Nuevo Nombre del Proyecto",
+      "success": "Proyecto renombrado exitosamente",
+      "title": "Renombrar Proyecto"
+    },
+    "table": {
+      "actions": "Acciones",
+      "name": "Nombre",
+      "updated": "Actualizado"
+    },
+    "tooltips": {
+      "createNewSection": "Comience aquí para crear un nuevo proyecto para monitorear la deforestación en su área de interés",
+      "delete": "Eliminar Proyecto",
+      "existingSection": "Ver y gestionar sus proyectos creados anteriormente",
+      "load": "Cargar Proyecto",
+      "rename": "Renombrar Proyecto"
+    },
+    "uniqueClasses": "Los nombres de las clases deben ser únicos"
+  },
+  "training": {
+    "evaluation": {
+      "close": "Cerrar",
+      "confusionMatrix": {
+        "predicted": "Predicho",
+        "title": "Matriz de Confusión"
+      },
+      "created": "Creado",
+      "interpretation": {
+        "accuracy": "El modelo alcanza una precisión general del {accuracy}%, lo que significa que clasifica correctamente este porcentaje de todas las muestras de prueba.",
+        "classMetrics": {
+          "f1": "Puntuación F1: {value}% medida de precisión balanceada",
+          "precision": "Precisión: {value}% de las áreas predichas como {class} son correctas",
+          "recall": "Exhaustividad: {value}% de las áreas reales de {class} son identificadas correctamente"
+        },
+        "keyFindings": "Hallazgos clave por clase:",
+        "title": "Interpretación"
+      },
+      "metrics": {
+        "class": "Clase",
+        "f1Score": "Puntuación F1",
+        "overallAccuracy": "Precisión General",
+        "precision": "Precisión",
+        "recall": "Exhaustividad",
+        "title": "Métricas de Rendimiento"
+      },
+      "noMetrics": {
+        "subtitle": "Por favor, entrene un modelo primero.",
+        "title": "No Hay Métricas Disponibles"
+      },
+      "parameters": {
+        "estimators": "Número de Estimadores",
+        "learningRate": "Tasa de Aprendizaje",
+        "maxDepth": "Profundidad Máxima",
+        "minChildWeight": "Peso Mínimo del Hijo",
+        "pixels": "píxeles",
+        "sieveSize": "Tamaño del Filtro Tamiz",
+        "splitMethod": "Método de División",
+        "subsample": "Submuestreo",
+        "title": "Parámetros del Modelo",
+        "trainTestSplit": "División Entrenamiento/Prueba"
+      },
+      "title": "Evaluación del Modelo",
+      "updated": "Actualizado"
+    },
+    "model": {
+      "evaluate": "Evaluar Modelo",
+      "fit": "Ajustar Modelo",
+      "loadprediction": "Cargar mapa de cobertura terrestre",
+      "notifications": {
+        "initiated": "Entrenamiento del modelo iniciado exitosamente"
+      },
+      "title": "Ajustar y Evaluar Modelo"
+    },
+    "modelSettings": "Configuración del Modelo",
+    "modelTraining": {
+      "buttons": {
+        "cancel": "Cancelar",
+        "train": "Entrenar Modelo",
+        "update": "Actualizar Modelo"
+      },
+      "dataSummary": {
+        "area": "Área (ha)",
+        "class": "Clase",
+        "features": "Características",
+        "percentage": "%",
+        "totalArea": "Área Total",
+        "totalSets": "Total de Conjuntos de Entrenamiento",
+        "trainingDates": "Fechas de datos de entrenamiento"
+      },
+      "parameters": {
+        "caption": "Haga clic para personalizar los parámetros del modelo",
+        "modelParams": {
+          "colsample": {
+            "description": "Fracción de características utilizadas para construir cada árbol. Puede ayudar a reducir el sobreajuste.",
+            "title": "Muestreo por Columna"
+          },
+          "estimators": {
+            "description": "El número de árboles en el bosque. Valores más altos generalmente mejoran el rendimiento pero aumentan el tiempo de entrenamiento.",
+            "title": "Número de Estimadores"
+          },
+          "gamma": {
+            "description": "Reducción mínima de pérdida requerida para hacer una partición adicional. Valores más altos hacen que el modelo sea más conservador.",
+            "title": "Gamma"
+          },
+          "learningRate": {
+            "description": "Reducción del tamaño del paso utilizada para prevenir el sobreajuste. Valores más bajos son generalmente mejores pero requieren más iteraciones.",
+            "title": "Tasa de Aprendizaje"
+          },
+          "maxDepth": {
+            "description": "Profundidad máxima de los árboles. Valores más altos hacen que el modelo sea más complejo y propenso al sobreajuste.",
+            "title": "Profundidad Máxima"
+          },
+          "minChildWeight": {
+            "description": "Suma mínima del peso de instancia necesaria en un hijo. Valores más altos hacen que el modelo sea más conservador.",
+            "title": "Peso Mínimo del Hijo"
+          },
+          "subsample": {
+            "description": "Fracción de muestras utilizadas para ajustar los árboles. Valores más bajos pueden ayudar a prevenir el sobreajuste.",
+            "title": "Submuestreo"
+          }
+        },
+        "sieveFilter": {
+          "description": "Tamaño mínimo de grupos de píxeles conectados para mantener en la predicción final. Valores más altos crean un mapa más generalizado al eliminar parches aislados pequeños. Establezca en 0 para deshabilitar el filtrado.",
+          "title": "Tamaño del Filtro Tamiz:"
+        },
+        "splitMethod": {
+          "feature": "Basado en características",
+          "featureDescription": "La división basada en características asegura la independencia entre los datos de entrenamiento y prueba al dividir polígonos completos. La división basada en píxeles puede mezclar píxeles del mismo polígono en ambos conjuntos.",
+          "pixel": "Basado en píxeles",
+          "title": "Elija el método de entrenamiento/prueba:"
+        },
+        "title": "Ajustar los parámetros del modelo (opcional)",
+        "trainTest": {
+          "description": "Esto determina la proporción de datos utilizada para pruebas. Un valor de {value} significa que el {percent}% de los datos se utilizará para pruebas y el {remaining}% para entrenamiento. Porcentajes más altos de prueba proporcionan estimaciones de precisión más confiables pero dejan menos datos para el entrenamiento.",
+          "title": "Ajustar la división entrenamiento/prueba:"
+        }
+      },
+      "progress": {
+        "cancel": "Cancelar",
+        "close": "Cerrar",
+        "title": "Entrenamiento y Predicción en Progreso",
+        "tooltips": {
+          "cancel": "Cancelar entrenamiento"
+        }
+      },
+      "title": {
+        "train": "Entrenar Modelo XGBoost",
+        "update": "Actualizar Modelo XGBoost"
+      },
+      "validation": {
+        "invalidConfig": "Por favor, asegúrese de que todos los parámetros del modelo sean válidos antes de entrenar",
+        "noData": "No hay datos de entrenamiento disponibles",
+        "oneFeature": "No se permiten clases con exactamente 1 característica",
+        "oneFeatureCaption": "Por favor, agregue al menos una característica más a: {classes}",
+        "parameterErrors": {
+          "colsample": "El colsample bytree debe estar entre 0 y 1",
+          "estimators": "El número de estimadores debe ser al menos 10",
+          "gamma": "Gamma debe ser no negativo",
+          "invalid": "Valor inválido para {param}",
+          "learningRate": "La tasa de aprendizaje debe ser mayor que 0",
+          "maxDepth": "La profundidad máxima debe ser al menos 1",
+          "minChildWeight": "El peso mínimo del hijo debe ser al menos 1",
+          "subsample": "El submuestreo debe estar entre 0 y 1"
+        },
+        "twoClasses": "Al menos dos clases deben tener datos de entrenamiento",
+        "twoClassesCaption": "Por favor, agregue características a al menos una clase más"
+      }
+    },
+    "selectPolygons": "Seleccionar Polígonos",
+    "startTraining": "Iniciar Entrenamiento",
+    "summary": {
+      "features": "característica",
+      "features_plural": "características",
+      "hectares": "ha",
+      "title": "Resumen de Datos de Entrenamiento"
+    },
+    "tooltips": {
+      "drawingSection": "",
+      "loadPrediction": "Cargue en el mapa una predicción de cobertura terrestre generada previamente para esta fecha.",
+      "modelSection": "",
+      "summarySection": ""
+    }
+  },
+  "welcome": {
+    "analysis": {
+      "chooseDates": {
+        "description": "El primer paso es seleccionar dos fechas con polígonos de entrenamiento disponibles para comenzar tu análisis.",
+        "title": "Elegir Fechas"
+      },
+      "intro": "En este módulo, realizamos un análisis de deforestación seleccionando dos fechas con polígonos de entrenamiento disponibles en la barra lateral de la izquierda. \nLuego, Choco Forest Watch comparará los cambios en el uso de la tierra a lo largo del tiempo e identificará posibles puntos críticos de deforestación.",
+      "run": {
+        "description": "Haga clic en 'Analizar' para calcular el cambio de uso de suelo a lo largo del tiempo y detectar posibles puntos críticos de deforestación.",
+        "title": "Ejecutar análisis de deforestación"
+      },
+      "summary": {
+        "description": "Revise las estadísticas resumidas y exporte los puntos críticos detectados para un análisis más detallado.",
+        "title": "Ver Resumen y Exportar"
+      },
+      "title": "Bienvenido al Módulo de Análisis de Deforestación",
+      "verify": {
+        "description": "Dado que muchos puntos críticos de deforestación detectados pueden ser falsos positivos, luego verificamos manualmente los puntos críticos de deforestación generados por Choco Forest Watch, junto con los detectados por el sistema de alerta de Global Forest Watch.",
+        "title": "Verificar Puntos Críticos"
+      }
+    },
+    "dontShowAgain": "",
+    "projects": {
+      "analysis": {
+        "description": "",
+        "title": ""
+      },
+      "aoi": {
+        "description": "",
+        "title": ""
+      },
+      "configure": {
+        "description": "",
+        "title": ""
+      },
+      "create": {
+        "description": "",
+        "title": ""
+      },
+      "feedback": "",
+      "intro": "",
+      "landcover": "",
+      "title": "",
+      "train": {
+        "description": "",
+        "title": ""
+      },
+      "workflow": ""
+    },
+    "training": {
+      "configure": {
+        "description": "",
+        "title": ""
+      },
+      "draw": {
+        "description": "",
+        "title": ""
+      },
+      "intro": "Aprenda cómo entrenar su modelo de detección de deforestación:",
+      "sections": {
+        "access": {
+          "description": "Las imágenes satelitales se proporcionan a través del programa NICFI de Planet Lab. Para acceder a las imágenes sin procesar o recibir asistencia con la plataforma, contacte a lukebrowne - at - fcat-ecuador.org.",
+          "title": "Acceso a las Imágenes"
+        },
+        "analysis": {
+          "description": "Después del entrenamiento, cambie a la pestaña 'Análisis' para aplicar su modelo. Compare la cobertura terrestre entre diferentes fechas para detectar cambios y generar alertas de deforestación. Puede verificar los cambios detectados y exportar los resultados para un análisis más detallado.",
+          "title": "Generar Análisis"
+        },
+        "drawing": {
+          "description": "Elija entre dibujo a mano alzada para límites precisos o modo cuadrado para dibujo rápido. \nUtilice atajos de teclado para cambiar rápidamente entre dibujar (D), desplazarse (M), acercar (Z) y alejar (X). \nCambie entre los modos de mano alzada y cuadrado con (F). \nCambie entre clases (bosque, no bosque, etc.) con las teclas numéricas del 1 al 5.",
+          "title": "Herramientas de Dibujo"
+        },
+        "example": {
+          "description": "Ejemplo de polígonos de entrenamiento dibujados en el mapa",
+          "title": "Ejemplo de Datos de Entrenamiento"
+        },
+        "imagery": {
+          "description": "Navegue por las imágenes satelitales de alta resolución disponibles usando el selector de fecha en la parte inferior del mapa o usando las teclas de flecha izquierda y derecha. \nBusque imágenes relativamente libres de nubes. \nPara mejorar los resultados de detección de deforestación, céntrese en al menos dos imágenes separadas idealmente por al menos varios meses. \nEl modelo solo generará predicciones para fechas en las que haya datos de entrenamiento disponibles.",
+          "title": "Seleccionar Imágenes Satelitales"
+        },
+        "model": {
+          "description": "Una vez que haya recolectado suficientes datos de entrenamiento, haga clic en 'Ajustar Modelo' para entrenar el clasificador de aprendizaje automático. Puede personalizar los parámetros del modelo o usar la configuración predeterminada. La opción 'Evaluar Modelo' proporciona métricas detalladas de precisión para evaluar el rendimiento.",
+          "title": "Entrenar su Modelo"
+        },
+        "training": {
+          "description": "Dibuje polígonos alrededor de áreas que representen diferentes tipos de cobertura terrestre: bosque, no-bosque, nubes, sombras y agua. Para un entrenamiento preciso del modelo, asegúrese de que cada polígono contenga solo un tipo de cobertura terrestre. Procure tener 30-50 ejemplos de cada clase, bien distribuidos en su área de interés.",
+          "title": "Crear Datos de Entrenamiento"
+        }
+      },
+      "title": "Bienvenido al Entrenamiento del Modelo",
+      "train": {
+        "description": "",
+        "title": ""
+      }
+    }
+  }
+}
